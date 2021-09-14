@@ -1,0 +1,15 @@
+{
+  "name": "talk-rn-architecture-21",
+  "version": "1.0.0",
+  "description": "Talk about React Native 2021 architecture",
+  "main": "index.js",
+  "author": "Akinn Rosa",
+  "license": "MIT",
+  "scripts": {
+    "start": "mdx-deck src/deck.mdx"
+  },
+  "dependencies": {
+    "mdx-code": "^2.0.0",
+    "mdx-deck": "^4.1.1"
+  }
+}
