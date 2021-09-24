@@ -1,7 +1,12 @@
-import { dark as theme } from "mdx-deck";
+import { dark as theme } from "mdx-deck/themes";
 
 export default {
   ...theme,
+
+  colors: {
+    ...theme.colors,
+    background: "#0D1117",
+  },
   // Customize your presentation theme here.
   //
   // Read the docs for more info:

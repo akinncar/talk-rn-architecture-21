@@ -2,16 +2,29 @@ import { Head, Image, Appear } from "mdx-deck";
 
 export { default as theme } from "./theme";
 
+import { Intro } from "./Intro";
+import { Cover } from "./Cover";
+
 <Head>
   <title>RN Architecture in 2021</title>
 </Head>
+
+<Intro />
+
+---
+
+<Cover />
+
+---
 
 ## Overview
 
 <ul>
   <Appear>
-    <li>GraphQL Concepts</li>
-    <li>Relay Concepts</li>
+    <li>JSI Modules</li>
+    <li>Turbo Modules</li>
+    <li>Codegen</li>
+    <li>Fabric</li>
   </Appear>
 </ul>
 
@@ -40,8 +53,4 @@ export { default as theme } from "./theme";
 
 ## References
 
-- [GraphQL Docs](https://graphql.org/)
-- [Relay Docs](https://relay.dev/)
-- [Practical GraphQL for Relay](https://github.com/sibelius/practical-graphql-relay)
-- [Relay Workshop Demo](https://react-europe-relay-workshop.now.sh/)
-- [The Problems of Schema First](https://www.prisma.io/blog/the-problems-of-schema-first-graphql-development-x1mn4cb0tyl3)
+- [The New React Native Architecture Explained](https://formidable.com/blog/2019/react-codegen-part-1/)
