@@ -1,9 +1,14 @@
 import { Head, Image, Appear } from "mdx-deck";
+import Code from "mdx-code";
+import { CodeSurfer } from "mdx-deck-code-surfer";
 
 export { default as theme } from "./theme";
 
 import { Intro } from "./Intro";
 import { Cover } from "./Cover";
+import { Patreon } from "./Patreon";
+
+import { Img } from "./Img";
 
 <Head>
   <title>RN Architecture in 2021</title>
@@ -21,7 +26,7 @@ import { Cover } from "./Cover";
 
 <ul>
   <Appear>
-    <li>JSI Modules</li>
+    <li>Javascript Interface (JSI)</li>
     <li>Turbo Modules</li>
     <li>Codegen</li>
     <li>Fabric</li>
@@ -30,27 +35,179 @@ import { Cover } from "./Cover";
 
 ---
 
-## GraphQL Concepts
+## Current Architecture
+
+<Img src="./img/current_architecture_diagram.png" height={500} />
+
+---
+
+## React "Native"
 
 <ul>
   <Appear>
-    <li>GraphQL Schema</li>
-    <li>GraphQL Query</li>
-    <li>GraphQL Types</li>
-    <li>GraphQL Resolvers</li>
-    <li>GraphQL Context</li>
-    <li>GraphQL Mutation</li>
+    <li>Native Components</li>
+    <li>Native Modules</li>
   </Appear>
 </ul>
 
 ---
 
-## Demo + Code Deep Dive
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Native Component: Color View"
+    code={require("!raw-loader!./ColorViewManager.java")}
+    showNumbers={false}
+    dark={true}
+    lang="java"
+    steps={[{ range: [1, 20], notes: "ColorViewManager.java" }]}
+  />
+</div>
 
-- https://react-europe-relay-workshop.now.sh/
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Native Component: Color View"
+    code={require("!raw-loader!./ColorPackage.java")}
+    showNumbers={false}
+    dark={true}
+    lang="java"
+    steps={[
+      { range: [1, 11], notes: "ColorPackage.java" },
+      { range: [7, 10], notes: "ColorPackage.java" },
+    ]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Native Component: Color View"
+    code={require("!raw-loader!./ColorApp.js")}
+    showNumbers={false}
+    dark={true}
+    lang="javascript"
+    steps={[
+      { range: [1, 3], notes: "App.js" },
+      { range: [5, 11], notes: "App.js" },
+    ]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Native Module: Sum"
+    code={require("!raw-loader!./SumModule.java")}
+    showNumbers={false}
+    dark={true}
+    lang="java"
+    steps={[{ range: [1, 19], notes: "SumModule.java" }]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Native Module: Sum"
+    code={require("!raw-loader!./SumPackage.java")}
+    showNumbers={false}
+    dark={true}
+    lang="java"
+    steps={[
+      { range: [1, 11], notes: "ColorPackage.java" },
+      { range: [2, 7], notes: "ColorPackage.java" },
+    ]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Native Module: Sum"
+    code={require("!raw-loader!./SumApp.js")}
+    showNumbers={false}
+    dark={true}
+    lang="javascript"
+    steps={[
+      { range: [1, 3], notes: "App.js" },
+      { range: [5, 11], notes: "App.js" },
+    ]}
+  />
+</div>
+
+---
+
+## Threads
+
+<Img src="./img/threads_1.png" height={500} />
+
+---
+
+## Threads
+
+<Img src="./img/threads_2.png" height={500} />
+
+---
+
+## Threads
+
+<Img src="./img/threads_3.png" height={500} />
+
+---
+
+## Threads
+
+## <Img src="./img/threads_4.png" height={500} />
+
+---
+
+## Threads
+
+<Img src="./img/threads_5.png" height={500} />
+
+---
+
+## Threads
+
+<Img src="./img/threads_6.png" height={500} />
+
+---
+
+## Problems
+
+<ul>
+  <Appear>
+    <li>Asynchronous</li>
+    <li>Serialized</li>
+    <li>A lot of Layers</li>
+  </Appear>
+</ul>
+
+---
+
+## Javascript Interface (JSI)
+
+JSI is an engine-independent API to interact with Javascript from C++.
+It allows to call functions and hold references on these two languages,
+without the need for any serialization.
+
+---
+
+<Patreon />
 
 ---
 
 ## References
 
-- [The New React Native Architecture Explained](https://formidable.com/blog/2019/react-codegen-part-1/)
+- [The New React Native Architecture Explained] (https://formidable.com/blog/2019/react-codegen-part-1/)
+- [David Vacca - The state of React Native] (https://youtu.be/FqMTXagEvHo?list=PLZ3MwD-soTTEOWXU2I8Y8C3AfqvJdn3M_)
+- [Parashuram N - React Native's New Architecture] (https://youtu.be/UcqRXTriUVI)
+- [Emily Janzer - The New React Native] (https://youtu.be/52El0EUI6D0)
+- [React-native JSI module] (https://ospfranco.com/post/2021/02/24/how-to-create-a-javascript-jsi-module/)
+- [React Native JSI: Part 1 - Getting Started](https://blog.notesnook.com/getting-started-react-native-jsi/)
+- [Bringing the Fabric renderer to the “Facebook” app] (https://www.youtube.com/watch?v=xKOkILSLs0Q&t=3985s)

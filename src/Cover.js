@@ -36,9 +36,9 @@ const MeName = styled.span`
 export const Cover = () => (
   <Root>
     <Center>
-      <Img src={"./img/react_native.png"} width={300} />
+      <Img src={"./img/react.png"} width={300} />
       <Title mt={20}>React Native Architecture in 2021</Title>
-      <Subtitle mt={20}>Subtitle</Subtitle>
+      {/* <Subtitle mt={20}>Subtitle</Subtitle> */}
       <MeName mt={100}>Akinn Rosa</MeName>
     </Center>
   </Root>
