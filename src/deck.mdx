@@ -7,6 +7,7 @@ export { default as theme } from "./theme";
 import { Intro } from "./Intro";
 import { Cover } from "./Cover";
 import { Patreon } from "./Patreon";
+import { Thanks } from "./Thanks";
 
 import { Img } from "./Img";
 
@@ -190,6 +191,19 @@ import { Img } from "./Img";
 
 ---
 
+## Turbo Modules
+
+Is the new generation of React Native Modules. It aims to work with native functions like browsers,
+exposing native functions using JSI and improving module performances.
+
+---
+
+## Browser Native Function
+
+<Img src="./img/browser_native_func.png" height={100} />
+
+---
+
 ## Javascript Interface (JSI)
 
 JSI is an engine-independent API to interact with Javascript from C++.
@@ -198,7 +212,100 @@ without the need for any serialization.
 
 ---
 
-<Patreon />
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Sum Module Header (Objective-C++)"
+    code={require("!raw-loader!./Sum.h")}
+    showNumbers={false}
+    dark={true}
+    lang="objectivec"
+    steps={[{ range: [1, 8], notes: "Sum.h" }]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Sum Module (Objective-C++)"
+    code={require("!raw-loader!./Sum.mm")}
+    showNumbers={false}
+    dark={true}
+    lang="objectivec"
+    steps={[
+      { range: [1, 29], notes: "Sum.mm" },
+      { range: [1, 4], notes: "Sum.mm" },
+      { range: [6, 15], notes: "Sum.mm" },
+      { range: [17, 24], notes: "Sum.mm" },
+      { range: [17, 29], notes: "Sum.mm" },
+    ]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Sum Module Header (C++)"
+    code={require("!raw-loader!./react-native-sum.h")}
+    showNumbers={false}
+    dark={true}
+    lang="cpp"
+    steps={[{ range: [1, 4], notes: "react-native-sum.h" }]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Sum Module (C++)"
+    code={require("!raw-loader!./react-native-sum.cpp")}
+    showNumbers={false}
+    dark={true}
+    lang="cpp"
+    steps={[
+      { range: [1, 28], notes: "react-native-sum.cpp" },
+      { range: [1, 4], notes: "react-native-sum.cpp" },
+      { range: [6, 28], notes: "react-native-sum.cpp" },
+      { range: [8, 8], notes: "react-native-sum.cpp" },
+      { range: [9, 9], notes: "react-native-sum.cpp" },
+      { range: [10, 10], notes: "react-native-sum.cpp" },
+      { range: [11, 20], notes: "react-native-sum.cpp" },
+      { range: [22, 23], notes: "react-native-sum.cpp" },
+      { range: [27, 27], notes: "react-native-sum.cpp" },
+    ]}
+  />
+</div>
+
+---
+
+<div style={{ fontSize: 26 }}>
+  <CodeSurfer
+    title="Sum Module (Javascript)"
+    code={require("!raw-loader!./SumAppCxx.js")}
+    showNumbers={false}
+    dark={true}
+    lang="javascript"
+    steps={[{ range: [1, 7], notes: "App.js" }]}
+  />
+</div>
+
+---
+
+## Libraries implemented using JSI
+
+- [react-native-reanimated] (https://github.com/software-mansion/react-native-reanimated)
+- [react-native-vision-camera] (https://github.com/mrousavy/react-native-vision-camera)
+- [react-native-mmkv] (https://github.com/mrousavy/react-native-mmkv)
+- [react-native-quick-sqlite] (https://github.com/ospfranco/react-native-quick-sqlite)
+
+---
+
+## Fabric
+
+Is the new generation of React Native Modules. It aims to work with native functions like browsers,
+exposing native functions using JSI and improving module performances.
 
 ---
 
@@ -211,3 +318,11 @@ without the need for any serialization.
 - [React-native JSI module] (https://ospfranco.com/post/2021/02/24/how-to-create-a-javascript-jsi-module/)
 - [React Native JSI: Part 1 - Getting Started](https://blog.notesnook.com/getting-started-react-native-jsi/)
 - [Bringing the Fabric renderer to the “Facebook” app] (https://www.youtube.com/watch?v=xKOkILSLs0Q&t=3985s)
+
+---
+
+<Patreon />
+
+---
+
+<Thanks />
