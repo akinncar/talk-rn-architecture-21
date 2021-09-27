@@ -15,11 +15,11 @@ import { Img } from "./Img";
   <title>RN Architecture in 2021</title>
 </Head>
 
-<Intro />
+<Cover />
 
 ---
 
-<Cover />
+<Intro />
 
 ---
 
@@ -304,8 +304,27 @@ without the need for any serialization.
 
 ## Fabric
 
-Is the new generation of React Native Modules. It aims to work with native functions like browsers,
-exposing native functions using JSI and improving module performances.
+Is the new React Native renderer. With Fabric, the UI operations are exposed to
+Javascript with JSI. This new UI can create and update native components
+passing information without using the bridge.
+
+---
+
+## Current Architecture
+
+<Img src="./img/threads_6.png" height={500} />
+
+---
+
+## ScrollView ASYNC
+
+<Img src="./img/flatlist_async.gif" height={500} />
+
+---
+
+## New Architecture
+
+<Img src="./img/new_arch.png" height={500} />
 
 ---
 
