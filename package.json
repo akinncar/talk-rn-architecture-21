@@ -16,7 +16,7 @@
     "raw-loader": "^1.0.0"
   },
   "scripts": {
-    "build": "mdx-deck build src/deck.mdx",
+    "build": "mdx-deck build --no-html src/deck.mdx",
     "help": "mdx-deck",
     "image": "mdx-deck sGITcreenshot src/deck.mdx",
     "pdf": "mdx-deck pdf src/deck.mdx",
