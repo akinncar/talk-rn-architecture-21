@@ -27,10 +27,12 @@ import { Img } from "./Img";
 
 <ul>
   <Appear>
-    <li>Javascript Interface (JSI)</li>
+    <li>How React Native works</li>
     <li>Turbo Modules</li>
-    <li>Codegen</li>
+    <li>Javascript Interface (JSI)</li>
     <li>Fabric</li>
+    <li>Codegen</li>
+    <li>Future of React Native</li>
   </Appear>
 </ul>
 
@@ -53,6 +55,10 @@ import { Img } from "./Img";
 
 ---
 
+## Native Component
+
+---
+
 <div style={{ fontSize: 26 }}>
   <CodeSurfer
     title="Native Component: Color View"
@@ -60,7 +66,12 @@ import { Img } from "./Img";
     showNumbers={false}
     dark={true}
     lang="java"
-    steps={[{ range: [1, 20], notes: "ColorViewManager.java" }]}
+    steps={[
+      { range: [1, 2], notes: "ColorViewManager.java" },
+      { range: [4, 8], notes: "ColorViewManager.java" },
+      { range: [10, 14], notes: "ColorViewManager.java" },
+      { range: [16, 19], notes: "ColorViewManager.java" },
+    ]}
   />
 </div>
 
@@ -98,6 +109,10 @@ import { Img } from "./Img";
 
 ---
 
+## Native Module
+
+---
+
 <div style={{ fontSize: 26 }}>
   <CodeSurfer
     title="Native Module: Sum"
@@ -105,7 +120,11 @@ import { Img } from "./Img";
     showNumbers={false}
     dark={true}
     lang="java"
-    steps={[{ range: [1, 19], notes: "SumModule.java" }]}
+    steps={[
+      { range: [1, 3], notes: "SumModule.java" },
+      { range: [5, 13], notes: "SumModule.java" },
+      { range: [15, 18], notes: "SumModule.java" },
+    ]}
   />
 </div>
 
@@ -183,11 +202,17 @@ import { Img } from "./Img";
 
 <ul>
   <Appear>
-    <li>Asynchronous</li>
+    <li>Only Asynchronous</li>
     <li>Serialized</li>
     <li>A lot of Layers</li>
   </Appear>
 </ul>
+
+---
+
+## Current ScrollView
+
+<Img src="./img/flatlist_async.gif" height={500} />
 
 ---
 
@@ -316,15 +341,48 @@ passing information without using the bridge.
 
 ---
 
-## ScrollView ASYNC
-
-<Img src="./img/flatlist_async.gif" height={500} />
-
----
-
 ## New Architecture
 
 <Img src="./img/new_arch.png" height={500} />
+
+---
+
+## New Architecture + Codegen
+
+<Img src="./img/new_arch_codegen.png" height={500} />
+
+---
+
+## Codegen (react-native-codegen)
+
+Automation to compatibility JS and Native code. It's a generator that will define
+your classes and functions in C++ base on types with Typescript and Flow,
+to avoid data validation every time.
+
+---
+
+## What should I do?
+
+<ul>
+  <Appear>
+    <li>Nothing (Your app will still work)</li>
+    <li>Update your app with new RN versions</li>
+    <li>Learn how to code with this new features</li>
+  </Appear>
+</ul>
+
+---
+
+## What's next?
+
+<ul>
+  <Appear>
+    <li>All new architecture for the community</li>
+    <li>More documentation</li>
+    <li>RN repository health</li>
+    <li>RN better for more platforms</li>
+  </Appear>
+</ul>
 
 ---
 
@@ -337,6 +395,7 @@ passing information without using the bridge.
 - [React-native JSI module] (https://ospfranco.com/post/2021/02/24/how-to-create-a-javascript-jsi-module/)
 - [React Native JSI: Part 1 - Getting Started](https://blog.notesnook.com/getting-started-react-native-jsi/)
 - [Bringing the Fabric renderer to the “Facebook” app] (https://www.youtube.com/watch?v=xKOkILSLs0Q&t=3985s)
+- [React Native in H2] (https://reactnative.dev/blog/2021/08/19/h2-2021)
 
 ---
 
