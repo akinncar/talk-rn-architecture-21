@@ -5,7 +5,7 @@ const { SumModule } = NativeModules;
 export default function App() {
   return (
     <View style={{ flex: 1 }}>
-      <Text>Result: {SumModule.sum(2 + 2)}</Text>
+      <Text>Result: {SumModule.sum(2, 2)}</Text>
     </View>
   );
 }
