@@ -1,4 +1,4 @@
-# React Native Re-architecture 2021 Slides
+# React Native Architecture 2021 Slides
 
 ### Slides
 
