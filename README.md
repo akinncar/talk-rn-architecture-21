@@ -3,6 +3,7 @@
 ### Slides
 
 Website: https://akinncar.github.io/talk-rn-architecture-21/#0
+
 PDF: https://speakerdeck.com/akinncar/react-native-architecture-in-2021
 
 ### Run
